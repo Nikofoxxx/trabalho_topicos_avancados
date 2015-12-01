@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">BooksSearch</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <!-- Home Screen -->
+    <string name="welcome_txt">Bem Vindo!</string>
+    <string name="about_txt">Este aplicativo tem o intuito de facilitar a busca por seus livros favoritos!</string>
+    <string name="search_txt">Informe o nome do livro a ser buscado: </string>
 </resources>
