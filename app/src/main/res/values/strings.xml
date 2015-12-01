@@ -7,4 +7,19 @@
     <string name="welcome_txt">Bem Vindo!</string>
     <string name="about_txt">Este aplicativo tem o intuito de facilitar a busca por seus livros favoritos!</string>
     <string name="search_txt">Informe o nome do livro a ser buscado: </string>
+    <string name="search_button_txt">Buscar</string>
+    <string name="list_liked_books_txt">Ver Favoritos</string>
+    <string name="list_unliked_books_txt">Ver Rejeitados</string>
+
+
+    <!-- Liked Books Screen -->
+    <string name="liked_books_header_txt">Lista de livros favoritos</string>
+
+    <!-- Unliked Books Screen -->
+    <string name="unliked_books_header_txt">Lista de livros rejeitados</string>
+
+    <!-- Common -->
+    <string name="go_to_home_button_txt">Página Inicial</string>
+    <string name="footer_txt">Tópicos Avançados, Univás - 2015</string>
+
 </resources>
