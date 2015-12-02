@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import univas.edu.br.bookssearch.web.WebTask;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,6 +20,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void configureButtons() {
+        Button searchButton = (Button) super.findViewById(R.id.searchButton);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //WebTask task = new WebTask(getApplicationContext(), textWeb);
+                //task.execute();
+            }
+        });
+
         Button listLikedBooksBtn = (Button) super.findViewById(R.id.listLikedBooksBtn);
         listLikedBooksBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ListUnlikedBooksActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button listFetchedBooksBtn = (Button) super.findViewById(R.id.listFetchedBooksBtn);
+        listFetchedBooksBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListFetchedBooksActivity.class);
                 startActivity(intent);
             }
         });

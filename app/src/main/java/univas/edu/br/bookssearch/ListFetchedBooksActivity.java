@@ -16,9 +16,8 @@ import android.widget.Button;
 /**
  * Created by nicolas on 01/12/15.
  */
-public class ListUnlikedBooksActivity extends FragmentActivity {
+public class ListFetchedBooksActivity extends FragmentActivity {
 
-    //TODO: Ver se da pra mudar
     private static final int NUM_PAGES = 10;
 
     private ViewPager mPager;
@@ -28,11 +27,12 @@ public class ListUnlikedBooksActivity extends FragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_unliked_books);
+        setContentView(R.layout.activity_list_fetched_books);
         mPager = (ViewPager) findViewById(R.id.pager);
         mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         mPager.setPageTransformer(true, new ZoomOutPageTransformer());
         mPager.setAdapter(mPagerAdapter);
+
         configureButtons();
     }
 
@@ -60,7 +60,7 @@ public class ListUnlikedBooksActivity extends FragmentActivity {
     }
 
     private void configureButtons() {
-        Button goHome = (Button) super.findViewById(R.id.unliked_to_homeBtn);
+        Button goHome = (Button) super.findViewById(R.id.fetched_to_homeBtn);
         goHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

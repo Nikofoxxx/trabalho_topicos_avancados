@@ -8,9 +8,12 @@
     <string name="about_txt">Este aplicativo tem o intuito de facilitar a busca por seus livros favoritos!</string>
     <string name="search_txt">Informe o nome do livro a ser buscado: </string>
     <string name="search_button_txt">Buscar</string>
+    <string name="list_fetched_books_txt">Ver Resultados da busca</string>
     <string name="list_liked_books_txt">Ver Favoritos</string>
     <string name="list_unliked_books_txt">Ver Rejeitados</string>
 
+    <!-- Fetched Books Screen -->
+    <string name="fetched_books_header_txt">Resultados da busca</string>
 
     <!-- Liked Books Screen -->
     <string name="liked_books_header_txt">Lista de livros favoritos</string>

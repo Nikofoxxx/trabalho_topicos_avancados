@@ -6,8 +6,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/unliked_books_header_txt"
-        android:id="@+id/textView6"
+        android:text="@string/fetched_books_header_txt"
+        android:id="@+id/textView9"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
@@ -19,13 +19,13 @@
         android:layout_height="200dp"
         android:layout_below="@+id/textView9"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="67dp" />
+        android:layout_marginTop="20dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/go_to_home_button_txt"
-        android:id="@+id/unliked_to_homeBtn"
+        android:id="@+id/fetched_to_homeBtn"
         android:layout_marginBottom="58dp"
         android:drawableLeft="@drawable/home"
         android:layout_alignParentBottom="true"
@@ -36,8 +36,9 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/footer_txt"
-        android:id="@+id/textView8"
+        android:id="@+id/textView10"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp" />
+
 </RelativeLayout>

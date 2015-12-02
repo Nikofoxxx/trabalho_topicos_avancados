@@ -16,8 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ListFetchedBooksActivity" android:label="BooksSearch - Resultados da Busca" ></activity>
         <activity android:name=".ListLikedBooksActivity" android:label="BooksSearch - Favoritados" ></activity>
         <activity android:name=".ListUnlikedBooksActivity" android:label="BooksSearch - Rejeitados" ></activity>
+        <activity android:name=".BooksViewPagerActivity" android:label="BooksSearch - teste" ></activity>
     </application>
 
 </manifest>
