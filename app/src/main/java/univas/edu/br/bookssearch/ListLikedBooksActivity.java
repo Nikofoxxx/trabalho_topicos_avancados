@@ -29,7 +29,7 @@ public class ListLikedBooksActivity extends FragmentActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_liked_books);
-        mPager = (ViewPager) findViewById(R.id.pager);
+        mPager = (ViewPager) findViewById(R.id.likedPager);
         mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         mPager.setPageTransformer(true, new ZoomOutPageTransformer());
         mPager.setAdapter(mPagerAdapter);

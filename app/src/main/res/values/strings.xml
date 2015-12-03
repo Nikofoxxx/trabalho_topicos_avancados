@@ -21,6 +21,11 @@
     <!-- Unliked Books Screen -->
     <string name="unliked_books_header_txt">Lista de livros rejeitados</string>
 
+    <!-- Books Informations -->
+    <string name="publisher">Editora: </string>
+    <string name="pageNumber">Páginas: </string>
+    <string name="link">Link: </string>
+
     <!-- Common -->
     <string name="go_to_home_button_txt">Página Inicial</string>
     <string name="footer_txt">Tópicos Avançados, Univás - 2015</string>

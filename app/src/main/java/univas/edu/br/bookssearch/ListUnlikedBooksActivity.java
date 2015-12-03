@@ -29,7 +29,7 @@ public class ListUnlikedBooksActivity extends FragmentActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_unliked_books);
-        mPager = (ViewPager) findViewById(R.id.pager);
+        mPager = (ViewPager) findViewById(R.id.unlikedPager);
         mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         mPager.setPageTransformer(true, new ZoomOutPageTransformer());
         mPager.setAdapter(mPagerAdapter);

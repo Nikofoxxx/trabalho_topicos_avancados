@@ -1,16 +1,24 @@
 package univas.edu.br.bookssearch;
 
 import android.content.Intent;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ScrollView;
+import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import univas.edu.br.bookssearch.web.WebTask;
 
 public class MainActivity extends AppCompatActivity {
+
+    private SimpleCursorAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +32,13 @@ public class MainActivity extends AppCompatActivity {
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //WebTask task = new WebTask(getApplicationContext(), textWeb);
-                //task.execute();
+
+                TextView searchBooksField = (TextView) findViewById(R.id.searchBooksField);
+                ViewPager fetchedBooksViewPager = (ViewPager)findViewById(R.id.fetchedPager);
+
+                WebTask task = new WebTask(getApplicationContext(), fetchedBooksViewPager, searchBooksField.getText().toString());
+                Toast.makeText(getApplicationContext(), "Buscando Livros...", Toast.LENGTH_SHORT).show();
+                task.execute();
             }
         });
 

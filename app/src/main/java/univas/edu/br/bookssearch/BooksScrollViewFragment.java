@@ -15,7 +15,7 @@ public class BooksScrollViewFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.books_scroll_view, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.books_informations, container, false);
 
         return rootView;
     }
