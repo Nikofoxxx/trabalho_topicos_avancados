@@ -14,6 +14,8 @@
 
     <!-- Fetched Books Screen -->
     <string name="fetched_books_header_txt">Resultados da busca</string>
+    <string name="likeBtn_txt">Curti</string>
+    <string name="unlikeBtn_txt">Não Curti</string>
 
     <!-- Liked Books Screen -->
     <string name="liked_books_header_txt">Lista de livros favoritos</string>

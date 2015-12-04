@@ -54,7 +54,7 @@
         android:layout_alignTop="@+id/textView13"
         android:layout_toRightOf="@+id/textView12"
         android:layout_toEndOf="@+id/textView12"
-        android:layout_marginLeft="10dp" />
+        android:layout_marginLeft="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -76,4 +76,5 @@
         android:layout_alignTop="@+id/textView16"
         android:layout_alignLeft="@+id/textView15"
         android:layout_alignStart="@+id/textView15" />
+
 </RelativeLayout>

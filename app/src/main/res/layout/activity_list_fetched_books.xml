@@ -41,4 +41,26 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/likeBtn_txt"
+        android:id="@+id/button"
+        android:layout_below="@+id/fetchedPager"
+        android:layout_alignLeft="@+id/fetchedPager"
+        android:layout_alignStart="@+id/fetchedPager"
+        android:drawableLeft="@drawable/unlike"
+        android:layout_marginTop="39dp"
+        android:layout_marginLeft="45dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unlikeBtn_txt"
+        android:id="@+id/button2"
+        android:drawableLeft="@drawable/like"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignRight="@+id/textView10"
+        android:layout_alignEnd="@+id/textView10" />
+
 </RelativeLayout>
