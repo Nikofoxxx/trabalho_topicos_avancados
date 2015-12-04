@@ -51,7 +51,7 @@ public class ListLikedBooksActivity extends FragmentActivity {
         }
 
         @Override
-        public Fragment getItem(int position) { return new BooksScrollViewFragment(); }
+        public Fragment getItem(int position) { return new BooksFragment(); }
 
         @Override
         public int getCount() {
