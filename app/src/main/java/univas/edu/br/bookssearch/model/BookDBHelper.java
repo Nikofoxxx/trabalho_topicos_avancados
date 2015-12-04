@@ -28,8 +28,8 @@ public class BookDBHelper extends SQLiteOpenHelper {
                 "CREATE TABLE " + BookContract.APPROVEDBOOKS_TABLE + " ("
                         + BookContract.Column.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                         + BookContract.Column.TITLE + " TEXT NOT NULL, "
-                        + BookContract.Column.PAGE_COUNT + " INTEGER NOT NULL, "
-                        + BookContract.Column.PUBLISHER + " TEXT NOT NULL, "
+                        + BookContract.Column.PAGE_COUNT + " TEXT, "
+                        + BookContract.Column.PUBLISHER + " TEXT, "
                         + BookContract.Column.INFO_LINK + " TEXT NOT NULL"
                         + " )";
 
@@ -42,8 +42,8 @@ public class BookDBHelper extends SQLiteOpenHelper {
                 "CREATE TABLE " + BookContract.REPROVEDBOOKS_TABLE + " ("
                         + BookContract.Column.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                         + BookContract.Column.TITLE + " TEXT NOT NULL, "
-                        + BookContract.Column.PAGE_COUNT + " INTEGER NOT NULL, "
-                        + BookContract.Column.PUBLISHER + " TEXT NOT NULL, "
+                        + BookContract.Column.PAGE_COUNT + " TEXT, "
+                        + BookContract.Column.PUBLISHER + " TEXT, "
                         + BookContract.Column.INFO_LINK + " TEXT NOT NULL"
                         + " )";
 

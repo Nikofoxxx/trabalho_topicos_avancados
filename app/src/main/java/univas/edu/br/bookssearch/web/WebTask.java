@@ -2,15 +2,13 @@ package univas.edu.br.bookssearch.web;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.widget.TextView;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import univas.edu.br.bookssearch.model.Book;
-
 
 /**
  * Created by nicolas on 01/12/15.
@@ -19,13 +17,13 @@ public class WebTask extends AsyncTask<Integer, Integer, String> {
 
     private static final String TAG = WebTask.class.getSimpleName();
     private Context context;
-    private ViewPager fetchedBooksViewPager;
+    private Button listFetchedBooksBtn;
     private String booksQuery;
+    private ArrayList<Book> books;
 
-
-    public WebTask(Context ctx, ViewPager fetchedBooksViewPager, String booksQuery) {
+    public WebTask(Context ctx, Button listFetchedBooksBtn, String booksQuery) {
         this.context = ctx;
-        this.fetchedBooksViewPager = fetchedBooksViewPager;
+        this.listFetchedBooksBtn = listFetchedBooksBtn;
         this.booksQuery = booksQuery;
     }
     
@@ -50,15 +48,20 @@ public class WebTask extends AsyncTask<Integer, Integer, String> {
     protected void onPostExecute(String result) {
         Log.d(TAG, "Valores de onPostExecute: " + result);
         if(result == null) {
+
+            listFetchedBooksBtn.setEnabled(false);
+
             Toast.makeText(context, "Ligue sua internet.", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(context, "Finalizado!", Toast.LENGTH_SHORT).show();
 
             JsonHelper jsonHelper = new JsonHelper();
 
-            ArrayList<Book> books = jsonHelper.extractBooks(result);
+            books = jsonHelper.extractBooks(result);
 
-            //widgetTexto.setText(cidade.getIbge() + " " + cidade.getLocalidade());
+            listFetchedBooksBtn.setEnabled(true);
         }
     }
+
+    public ArrayList<Book> getBooks(){ return books; }
 }

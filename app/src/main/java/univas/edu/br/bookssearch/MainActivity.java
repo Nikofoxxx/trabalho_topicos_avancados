@@ -14,11 +14,18 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
+import java.util.ArrayList;
+
+import univas.edu.br.bookssearch.model.Book;
 import univas.edu.br.bookssearch.web.WebTask;
 
 public class MainActivity extends AppCompatActivity {
 
     private SimpleCursorAdapter adapter;
+    private ArrayList<Book> booksList;
+    private WebTask task;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 TextView searchBooksField = (TextView) findViewById(R.id.searchBooksField);
-                ViewPager fetchedBooksViewPager = (ViewPager)findViewById(R.id.fetchedPager);
-
-                WebTask task = new WebTask(getApplicationContext(), fetchedBooksViewPager, searchBooksField.getText().toString());
+                Button listFetchedBooksBtn = (Button) findViewById(R.id.listFetchedBooksBtn);
+                listFetchedBooksBtn.setEnabled(false);
+                task = new WebTask(getApplicationContext(), listFetchedBooksBtn, searchBooksField.getText().toString());
                 Toast.makeText(getApplicationContext(), "Buscando Livros...", Toast.LENGTH_SHORT).show();
                 task.execute();
             }
@@ -61,10 +68,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button listFetchedBooksBtn = (Button) super.findViewById(R.id.listFetchedBooksBtn);
+        listFetchedBooksBtn.setEnabled(false);
         listFetchedBooksBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ListFetchedBooksActivity.class);
+                booksList = task.getBooks();
+                intent.putParcelableArrayListExtra("books", booksList);
                 startActivity(intent);
             }
         });

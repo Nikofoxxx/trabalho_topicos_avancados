@@ -66,7 +66,7 @@ public class BookDAO extends BookDBHelper {
                 Book book = new Book();
                 //book.setId(cursor.getInt(0));
                 book.setTitle(cursor.getString(1));
-                book.setPageCount(cursor.getInt(2));
+                book.setPageCount(cursor.getString(2));
                 book.setPublisher(cursor.getString(3));
                 book.setInfoLink(cursor.getString(4));
                 list.add(book);
@@ -99,7 +99,7 @@ public class BookDAO extends BookDBHelper {
                 Book book = new Book();
                 //book.setId(cursor.getInt(0));
                 book.setTitle(cursor.getString(1));
-                book.setPageCount(cursor.getInt(2));
+                book.setPageCount(cursor.getString(2));
                 book.setPublisher(cursor.getString(3));
                 book.setInfoLink(cursor.getString(4));
                 list.add(book);
